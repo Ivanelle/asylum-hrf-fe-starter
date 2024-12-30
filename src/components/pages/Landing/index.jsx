@@ -2,15 +2,12 @@ import pieChart from '../../../assets/pie-chart.png';
 import lineGraph from '../../../assets/line-graph.png';
 import barGraph from '../../../assets/bar-graph.png';
 import paperStack from '../../../assets/paper-stack.jpg';
+import Header from '../../layout/Header.jsx';
 import { useNavigate } from 'react-router-dom';
 import { useDownloadData } from '../../../hooks/useDownloadData.js';
 import {decodeBase64} from '../../../utils/decodeBase64.js';
 
-/**
- * TODO: Ticket 1:
- * Implement structure and styles of the Landing page using Tailwind
- * Implement any button functionality implied by the landing page screenshot example (tickets/examples)
- */
+
 export const LandingPage = () => {
   const navigate = useNavigate();
   const { downloadCSV } = useDownloadData();
@@ -31,18 +28,7 @@ export const LandingPage = () => {
   };
 
   return (
-    <div className="flex-c w-full">
-      <div className="flex w-50 text-center secondary-c" id="header">
-        <div className="text-center w-full pb-10" id="header-text">
-          <h1 className="text-4xl text-white">Asylum Office Grant Rate Tracker</h1>
-            <h3 className="text-l text-white">
-              The Asylum Office Grant Rate Tracker provides asylum seekers,
-              researchers, policymakers, and the public an interactive tool to
-              explore USCIS data on Asylum Office decisions
-            </h3>
-        </div>
-      </div>
-
+      <div>
         <div className="flex justify-evenly text-lg">
           <div className="text-center"> 
             <img src={barGraph} alt="barGraph" className="h-48 " />
@@ -168,9 +154,5 @@ export const LandingPage = () => {
           Back To Top ^
         </p>
     </div>
-
-    
-        
-
   );
 };
