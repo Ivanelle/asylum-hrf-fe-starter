@@ -2,10 +2,10 @@ import pieChart from '../../../assets/pie-chart.png';
 import lineGraph from '../../../assets/line-graph.png';
 import barGraph from '../../../assets/bar-graph.png';
 import paperStack from '../../../assets/paper-stack.jpg';
-import Header from '../../layout/Header.jsx';
 import { useNavigate } from 'react-router-dom';
 import { useDownloadData } from '../../../hooks/useDownloadData.js';
 import {decodeBase64} from '../../../utils/decodeBase64.js';
+import Header from '../../layout/Header.jsx';
 
 
 export const LandingPage = () => {
@@ -29,6 +29,14 @@ export const LandingPage = () => {
 
   return (
       <div>
+          <div className="primary-c bg-brown flex flex-col text-center w-full pb-[20px]"> 
+            <h1 className="text-4xl text-white p-[20px]">Asylum Office Grant Rate Tracker</h1>
+            <p className="text-white">
+              The Asylum Office Grant Rate Tracker provides asylum seekers,
+              researchers, policymakers, and the public an interactive tool to
+              explore USCIS data on Asylum Office decisions. 
+            </p>
+          </div>
         <div className="flex justify-evenly text-lg">
           <div className="text-center"> 
             <img src={barGraph} alt="barGraph" className="h-48 " />

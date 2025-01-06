@@ -25,9 +25,8 @@ const Profile = () => {
 
   return (
     <div>
-      <h2>Profiel</h2>
       <img src={user.picture} alt="Profile Picture" />
-      <h1>{user.name}</h1>
+      <h1 className="bold">{user.name}</h1>
       <p>{user.email}</p>
     </div>
   );
